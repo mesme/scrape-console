@@ -15,7 +15,7 @@ REQUIREMENTS:
 1) Installing the application
 ----------------------------------
 
-2. Git clone
+Git clone https://github.com/mesme/scrape-console.git
 
 ### Use Composer (*recommended*)
 
@@ -72,7 +72,11 @@ http://getcomposer.org/ or just run the following command:
        ]
     }
 
-4. Unit Tests can be found in /src/BBC/ScrapeBundle/Tests
+
+4. Unit Tests
+
+----------------------------------
+   Located at /src/BBC/ScrapeBundle/Tests
    To run unit test, Go to the root location of the application and run php bin/phpunit -c app
    PHPUnit xml config is located at app/phpunit.xml.dist
 
