@@ -15,23 +15,39 @@ REQUIREMENTS:
 1) Installing the application
 ----------------------------------
 
-Git clone https://github.com/mesme/scrape-console.git
+    Git clone https://github.com/mesme/scrape-console.git
 
-### Use Composer (*recommended*)
+    ### Use Composer (*recommended*)
 
-If you don't have Composer yet, download it following the instructions on
-http://getcomposer.org/ or just run the following command:
+    If you don't have Composer yet, download it following the instructions on
+    http://getcomposer.org/ or just run the following command:
 
     curl -s http://getcomposer.org/installer | php
 
     php composer.phar install
 
-3. How to Run
+2. How to Run
 ----------------------------------
- 1. Go to the root location of the application
- 2. type: php app/console scrape
- 3. Output Example
+    1. Go to the root location of the application
+    2. type: php app/console scrape
 
+3. Unit Tests
+----------------------------------
+
+   1. Located at /src/BBC/ScrapeBundle/Tests
+   2. To run unit test, Go to the root location of the application and run php bin/phpunit -c app
+   3. PHPUnit xml config is located at app/phpunit.xml.dist
+
+4. The service class that process the content is located at /src/BBC/ScrapeBundle/Service/Scrape.php which is injected
+    from app/config/services.yml
+
+    services:
+        scrape_web_page:
+            class: BBC\ScrapeBundle\Service\Scrape
+            arguments: [@session]
+
+5. Output Example
+--------------------------------
     {
        "results":[
           {
@@ -71,19 +87,3 @@ http://getcomposer.org/ or just run the following command:
           }
        ]
     }
-
-
-4. Unit Tests
-
-----------------------------------
-   Located at /src/BBC/ScrapeBundle/Tests
-   To run unit test, Go to the root location of the application and run php bin/phpunit -c app
-   PHPUnit xml config is located at app/phpunit.xml.dist
-
-5. The service class that process the content is located at /src/BBC/ScrapeBundle/Service/Scrape.php which is injected
-    from app/config/services.yml
-
-    services:
-        scrape_web_page:
-            class: BBC\ScrapeBundle\Service\Scrape
-            arguments: [@session]
