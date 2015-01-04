@@ -26,6 +26,23 @@ REQUIREMENTS:
 
     php composer.phar install
 
+    Please note, during the composer installation process please hit enter for all the parameters question. See below for reference.
+        Creating the "app/config/parameters.yml" file
+        Some parameters are missing. Please provide them.
+        database_driver (pdo_mysql):
+        database_host (127.0.0.1):
+        database_port (null):
+        database_name (symfony):
+        database_user (root):
+        database_password (null):
+        mailer_transport (smtp):
+        mailer_host (127.0.0.1):
+        mailer_user (null):
+        mailer_password (null):
+        locale (en):
+        secret (ThisTokenIsNotSoSecretChangeIt)
+
+
 2. How to Run
 ----------------------------------
     1. Go to the root location of the application
@@ -35,7 +52,7 @@ REQUIREMENTS:
 ----------------------------------
 
    1. Located at /src/BBC/ScrapeBundle/Tests
-   2. To run unit test, Go to the root location of the application and run php bin/phpunit -c app
+   2. run "php bin/phpunit -c app" from the root location of the application
    3. PHPUnit xml config is located at app/phpunit.xml.dist
 
 4. Service Class
