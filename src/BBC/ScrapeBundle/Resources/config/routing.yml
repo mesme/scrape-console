@@ -1,0 +1,3 @@
+scrap_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ScrapeBundle:Default:index }
