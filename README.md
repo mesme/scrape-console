@@ -38,13 +38,10 @@ REQUIREMENTS:
    2. To run unit test, Go to the root location of the application and run php bin/phpunit -c app
    3. PHPUnit xml config is located at app/phpunit.xml.dist
 
-4. The service class that process the content is located at /src/BBC/ScrapeBundle/Service/Scrape.php which is injected
-    from app/config/services.yml
-
-    services:
-        scrape_web_page:
-            class: BBC\ScrapeBundle\Service\Scrape
-            arguments: [@session]
+4. Service Class
+----------------------------------
+   1. The service class that process the content is located at /src/BBC/ScrapeBundle/Service/Scrape.php which is injected
+      from app/config/services.yml
 
 5. Output Example
 --------------------------------
